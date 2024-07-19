@@ -3,14 +3,27 @@ import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRoute = () => {
   const { isAuthenticated, isLoading } = useAuth0();
-  console.log('isAuthenticated:', isAuthenticated);
-  console.log('isLoading:', isLoading);
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
   return isAuthenticated ? <Outlet /> : <Navigate to="/" replace />;
+
+  
+  
+  
+  //without showing loading. with a blank white page
+  
+  // if(isLoading){
+  //   return null;
+  // }
+
+  // if(isAuthenticated){
+  //   return <Outlet/>
+  // }
+
+  // return <Navigate to="/" replace/>
 };
 
 export default ProtectedRoute;
