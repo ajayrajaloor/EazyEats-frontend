@@ -17,7 +17,6 @@ const OrderSummary = ({restaurant, cartItems, removeFromCart}: Props) => {
       const  totalPrice = cartItems.reduce((total,cartItem) =>  total + cartItem.price * cartItem.quantity, 0 );
       
       const totalWithDelivery = totalPrice + restaurant.deliveryPrice;
-
       return  (totalWithDelivery)
     }
 
