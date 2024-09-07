@@ -26,16 +26,16 @@ const OrderItemCard = ({order}: Props) => {
        setStatus(newStatus)
     };
 
-  const getTime = () =>{
-    const orderDateTime = new Date(order.createdAt);
+//   const getTime = () =>{
+//     const orderDateTime = new Date(order.createdAt);
 
-    const hours = orderDateTime.getHours();
-    const minutes = orderDateTime.getMinutes();
+//     const hours = orderDateTime.getHours();
+//     const minutes = orderDateTime.getMinutes();
 
-    const paddedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+//     const paddedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 
-    return `${hours}:${paddedMinutes}`
-  }
+//     return `${hours}:${paddedMinutes}`
+//   }
     return(
     <Card>
         <CardHeader>
@@ -52,12 +52,12 @@ const OrderItemCard = ({order}: Props) => {
                         {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
                     </span>
                 </div>
-                <div>
+                {/* <div>
                     Time:
                     <span className="ml-2 font-normal">
                         {getTime()}
                     </span>
-                </div>
+                </div> */}
                 <div>
                     Total Cost: 
                     <span className="ml-2 font-normal">
