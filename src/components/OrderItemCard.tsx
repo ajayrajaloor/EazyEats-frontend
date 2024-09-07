@@ -39,16 +39,16 @@ const OrderItemCard = ({order}: Props) => {
     return(
     <Card>
         <CardHeader>
-            <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3">
-                <div>
+            <CardTitle className="grid md:grid-cols-3 gap-2 justify-between mb-3">
+                <div className="flex items-center ">
                     Customer Name:
                     <span className="ml-2 font-normal">
                         {order.deliveryDetails.name}
                     </span>
                 </div>
-                <div>
-                    Delivery address:
-                    <span className="ml-2 font-normal">
+                <div >
+                    <div className="flex justify-center items-center ">Delivery address:</div>
+                    <span className="flex justify-center items-center ml-2 font-normal">
                         {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
                     </span>
                 </div>
@@ -58,7 +58,7 @@ const OrderItemCard = ({order}: Props) => {
                         {getTime()}
                     </span>
                 </div> */}
-                <div>
+                <div className="flex items-center justify-center">
                     Total Cost: 
                     <span className="ml-2 font-normal">
                         ₹{(order.totalAmount)}
