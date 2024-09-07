@@ -6,10 +6,8 @@ import { useNavigate } from "react-router-dom";
 const AuthCallbackPage = () => {
     const navigate = useNavigate()
     const {user}  = useAuth0()
-    console.log(user,"uuuuuuuuussssssss");
     
     const {createUser} = useCreateMyUser()
-console.log(createUser,"createeeeeeeeuuuuu");
 
     const hasCreatedUser = useRef(false)
 

@@ -51,7 +51,6 @@ export const useCreateMyUser = () => {
   const {getAccessTokenSilently} = useAuth0()
   const createMyUserRequest = async (user: CreateUserRequest) => {
     const accessToken = await getAccessTokenSilently()
-    console.log(accessToken,"accesssssttttt");
     
     const response = await fetch(`${API_BASE_URL}/api/my-user`, {
       method: "POST",
@@ -66,8 +65,6 @@ export const useCreateMyUser = () => {
     if (!response.ok) {
       throw new Error("Failed to create user");
     }
-    console.log(response,"respspspspsspsp");
-    
   };
 
   const {
