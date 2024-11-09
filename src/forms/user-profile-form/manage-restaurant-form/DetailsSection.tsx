@@ -46,13 +46,13 @@ const DetailsSection = () => {
             <FormMessage/>
         </FormItem> )}/>
 
-        {/* <FormField control={control} name="estimatedDeliveryTime" render={({field}) => (<FormItem className="max-w-[25%]">
+        <FormField control={control} name="estimatedDeliveryTime" render={({field}) => (<FormItem className="max-w-[25%]">
             <FormLabel>Estimated Delivery Time</FormLabel>
             <FormControl>
                 <Input {...field} className="bg-white" placeholder="30"/>
             </FormControl>
             <FormMessage/>
-        </FormItem> )}/> */}
+        </FormItem> )}/>
 
     </div>
   )

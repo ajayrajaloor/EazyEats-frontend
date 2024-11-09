@@ -15,10 +15,10 @@ const SORT_OPTIONS = [
         label: "Delivery price",
         value: "deliveryPrice"
     },
-    // {
-    //     label: "Estimated delivery time",
-    //     value: "estimatedDeliveryTime"
-    // }
+    {
+        label: "Estimated delivery time",
+        value: "estimatedDeliveryTime"
+    }
 ]
 
 const SortOptionDropdown = ({onChange, sortOption}: Props) => {
